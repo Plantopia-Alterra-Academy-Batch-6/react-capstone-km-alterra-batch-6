@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-white;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: "nunito";
+  src: url("../fonts/Nunito-Regular.ttf");
+}
+@font-face {
+  font-family: "nunito-light";
+  src: url("../fonts/Nunito-Light.ttf");
+}
+@font-face {
+  font-family: "nunito-bold";
+  src: url("../fonts/Nunito-Bold.ttf");
+}
+@font-face {
+  font-family: "nunito-italic";
+  src: url("../fonts/Nunito-Regular-Italic.ttf");
+}
+@font-face {
+  font-family: "nunito-semibold";
+  src: url("../fonts/Nunito-SemiBold.ttf");
+}
+.checkbox-custom:checked {
+  @apply bg-emerald-500 border-emerald-500;
+}
+.checkbox-custom:checked:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url("../icons/Icons-Check.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+@layer utilities {
+  .resize-webkit-time-picker-indicator::-webkit-calendar-picker-indicator {
+    transform: scale(1.5);
+  }
+}
+
+.text-stroke-3 {
+  background-image: linear-gradient(#10b981, #10b981);
+  background-clip: text;
+  -webkit-text-stroke-width: calc(1em / 16);
+  -webkit-text-stroke-color: transparent;
+  -webkit-background-clip: text;
+  color: white;
+  letter-spacing: 6px;
+}
+
+.text-stroke-white {
+  background-image: linear-gradient(white, white);
+  background-clip: text;
+  -webkit-text-stroke-width: calc(1em / 16);
+  -webkit-text-stroke-color: transparent;
+  -webkit-background-clip: text;
+  color: #10b981;
+  letter-spacing: 6px;
+}
+
+*::-webkit-scrollbar {
+  width: 18px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #10b981;
+  border-radius: 50px;
+  border: 5px solid #ffff;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #10b981bd;
+}
+
+iframe::-webkit-scrollbar {
+  width: 18px;
+}
+
+iframe::-webkit-scrollbar-thumb {
+  background: #10b981;
+  border-radius: 50px;
+  border: 5px solid #ffff;
+}
+
+iframe::-webkit-scrollbar-thumb:hover {
+  background: #10b981bd;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 18px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #10b981;
+  border-radius: 50px;
+  border: 5px solid #ffff;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #10b981bd;
+}
+
+/* Loader CSS */
+.lds-ring,
+.lds-ring div {
+  box-sizing: border-box;
+}
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #10b981;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #10b981 transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,22 @@
+import ContentManagePlant from "@/components/Dashboard/Component_ManagePlant/Content-Manage-Plant";
+import SearchManagePlant from "@/components/Dashboard/Component_ManagePlant/Search-Manage-Plant";
+
+import React from "react";
+import Alert_DeletePlant from "../../../components/Dashboard/Component_Add_plant/Component-Alert/Alert_DeletePlant";
+import Message_Success from "../../../components/Component_Message/Message_Success";
+import Message_DeletePlant from "../../../components/Component_Message/Message_Delete";
+import Message_Error from "../../../components/Component_Message/Message_Error";
+
+export default function page() {
+  return (
+    <>
+      <ContentManagePlant />
+      <Alert_DeletePlant />
+      <Message_Success
+        message={"Yay! Plant successfully added to your plant list! 🙌"}
+      />
+      <Message_Error message={"Uh oh! youre data is error to Delete"} />
+      <Message_DeletePlant message={"Plant data deleted successfully."} />
+    </>
+  );
+}
